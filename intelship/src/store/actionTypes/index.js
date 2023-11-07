@@ -1,0 +1,13 @@
+export const USER_LOGIN = "user/login";
+export const USER_LOGOUT = "user/logout";
+export const FETCH_VESSEL = "vessel/fetch";
+export const FETCH_VESSELS = "vessels/fetch";
+export const LOADING_VESSEL = "vessel/loading";
+export const FETCH_FUELTANK = "fueltank/fetch";
+export const FETCH_FUELTANKS = "fueltanks/fetch";
+export const LOADING_FUELTANK = "fueltank/loading";
+export const FETCH_VESSELS_INFO = "vesselInfo/fetch";
+export const FETCH_VESSELS_CLIENT = "vessels/client/fetch";
+export const FETCH_COMPANIES = "companies/fetch";
+export const LOADING_COMPANY = "company/loading";
+export const FETCH_COMPANY = "company/fetch";

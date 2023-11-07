@@ -1,0 +1,91 @@
+{
+  "name": "intelship",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/cache": "11.10.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/server": "11.10.0",
+    "@emotion/styled": "^11.10.6",
+    "@heroicons/react": "2.0.16",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/lab": "5.0.0-alpha.120",
+    "@mui/material": "^5.11.10",
+    "@mui/system": "5.11.9",
+    "@mui/x-date-pickers": "5.0.19",
+    "@react-google-maps/api": "^2.18.1",
+    "@reduxjs/toolkit": "^1.9.3",
+    "apexcharts": "3.37.0",
+    "axios": "^1.3.4",
+    "cdbreact": "^1.5.17",
+    "chart.js": "^4.3.0",
+    "date-fns": "2.29.3",
+    "formik": "2.2.9",
+    "framer-motion": "^10.16.4",
+    "google-maps-react": "^2.0.6",
+    "jquery": "^3.7.0",
+    "leaflet": "^1.9.3",
+    "next": "13.1.6",
+    "next-transpile-modules": "^10.0.0",
+    "nprogress": "0.2.0",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-apexcharts": "1.4.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "18.2.0",
+    "react-google-maps-api": "^1.0.8",
+    "react-helmet": "^6.1.0",
+    "react-leaflet": "^4.2.1",
+    "react-pro-sidebar": "^1.1.0-alpha.1",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "^2.1.3",
+    "react-speedometer": "^0.1.2",
+    "react-spinners": "^0.13.8",
+    "react-toastify": "^9.1.3",
+    "reactstrap": "^9.2.0",
+    "redux-thunk": "^2.4.2",
+    "sharp": "^0.32.0",
+    "simplebar-react": "^3.2.1",
+    "sweetalert2": "^11.7.31",
+    "yup": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.13.0",
+    "@types/nprogress": "0.2.0",
+    "@types/numeral": "2.0.2",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "autoprefixer": "^10.4.16",
+    "eslint": "8.34.0",
+    "eslint-config-next": "13.1.6",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint",
+    "lint-fix": "next lint --fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

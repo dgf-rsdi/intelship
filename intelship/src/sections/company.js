@@ -122,18 +122,34 @@ export default function Company(props) {
                       <TableCell>{company.phone}</TableCell>
                       <TableCell>{company.phone2}</TableCell>
                       <TableCell>
-                      <button
+                      {/* <button
                         className="py-1 px-3 mb-2 rounded-full bg-yellow-500 hover:bg-yellow-600 font-semi-bold text-white text-l"
                         onClick={e => editHandler(company.id, e)}
                       >
                         Edit
-                      </button>
-                        <button
+                      </button> */}
+                      <Button
+                      variant="contained"
+                      color="warning"
+                      style={{ paddingLeft:"3px", paddingRight:"3px", paddingTop:"1px", paddingBottom:"1px", marginBottom:"2px" }}
+                      onClick={e => editHandler(company.id, e)}
+                    >
+                      Edit
+                    </Button>
+                        {/* <button
                           className="py-1 px-3 mt-2 mb-2 rounded-full bg-red-500 hover:bg-red-600 font-semi-bold text-white text-l"
                           onClick={() => deleteHandler(company.id)}
                         >
                           Delete
-                        </button>
+                        </button> */}
+                        <Button
+                      variant="contained"
+                      color="error"
+                      style={{ paddingLeft:"3px", paddingRight:"3px", paddingTop:"1px", paddingBottom:"1px", marginBottom:"2px", marginTop:"2px" }}
+                      onClick={() => deleteHandler(company.id)}
+                    >
+                      Delete
+                    </Button>
                       </TableCell>
                     </TableRow>
                   );

@@ -205,18 +205,34 @@ export default function Page(props) {
                     <TableCell>{vessel.pitch}</TableCell>
                     <TableCell>{vessel.roll}</TableCell>
                     <TableCell>
-                      <button
+                      {/* <button
                         className="py-1 px-3 mb-2 rounded-full bg-blue-500 hover:bg-blue-600 font-semi-bold text-white text-l"
                         onClick={e => detailHandler(vessel.id, e)}
                       >
                         Detail
-                      </button>
-                      <button
+                      </button> */}
+                      <Button
+                      variant="contained"
+                      color="warning"
+                      onClick={e => detailHandler(vessel.id, e)}
+                      style={{ paddingLeft:"3px", paddingRight:"3px", paddingTop:"1px", paddingBottom:"1px", marginBottom:"2px" }}
+                    >
+                      Detail
+                    </Button>
+                      {/* <button
                         className="py-1 px-3 mt-2 mb-2 rounded-full bg-red-500 hover:bg-red-600 font-semi-bold text-white text-l"
                         onClick={() => deleteHandler(vessel.id)}
                       >
                         Delete
-                      </button>
+                      </button> */}
+                      <Button
+                      variant="contained"
+                      color="error"
+                      style={{ paddingLeft:"3px", paddingRight:"3px", paddingTop:"1px", paddingBottom:"1px", marginBottom:"2px", marginTop:"2px" }}
+                      onClick={() => deleteHandler(vessel.id)}
+                    >
+                      Delete
+                    </Button>
                     </TableCell>
                   </TableRow>
                 );

@@ -15,58 +15,80 @@ import {
 } from '@mui/material';
 import { Logo } from 'src/components/logo';
 import { Scrollbar } from 'src/components/scrollbar';
-import { items } from './config';
+// import { items } from './config';
 import { SideNavItem } from './side-nav-item';
 import Intelship from '../../assets/images/intelship.jpg'
 import Image from 'next/image'
 import PlusIcon from "@heroicons/react/24/solid/PlusIcon";
 import UsersIcon from "@heroicons/react/24/solid/UsersIcon";
 import BriefcaseIcon from "@heroicons/react/24/solid/BriefcaseIcon";
+import ChartBarIcon from "@heroicons/react/24/solid/ChartBarIcon";
 
 export const SideNav = (props) => {
   const { open, onClose } = props;
   const pathname = usePathname();
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
   const role = localStorage.getItem('role');
-if (role === 'admin') {
-  items.push({
-    title: "Create Vessel",
-    path: "/createvessel",
-    icon: (
-      <SvgIcon fontSize="small">
-        <PlusIcon />
-      </SvgIcon>
-    )
-  },{
-    title: "Register User",
-    path: "/auth/register",
-    icon: (
-      <SvgIcon fontSize="small">
-        <UsersIcon />
-      </SvgIcon>
-    )
-  },{
-    title: "Company Table",
-    path: "/company",
-    icon: (
-      <SvgIcon fontSize="small">
-        <BriefcaseIcon />
-      </SvgIcon>
-    )
-  },)
-}
+
+  let items = [];
+
+  if (role === 'admin') {
+    items = [{
+      title: "Overview",
+      path: "/",
+      icon: (
+        <SvgIcon fontSize="small">
+          <ChartBarIcon />
+        </SvgIcon>
+      )
+    }, {
+      title: "Create Vessel",
+      path: "/createvessel",
+      icon: (
+        <SvgIcon fontSize="small">
+          <PlusIcon />
+        </SvgIcon>
+      )
+    }, {
+      title: "Register User",
+      path: "/auth/register",
+      icon: (
+        <SvgIcon fontSize="small">
+          <UsersIcon />
+        </SvgIcon>
+      )
+    }, {
+      title: "Company Table",
+      path: "/company",
+      icon: (
+        <SvgIcon fontSize="small">
+          <BriefcaseIcon />
+        </SvgIcon>
+      )
+    }]
+  } else {
+    items = [{
+      title: "Overview",
+      path: "/",
+      icon: (
+        <SvgIcon fontSize="small">
+          <ChartBarIcon />
+        </SvgIcon>
+      )
+    }]
+  }
 
   const content = (
     <Scrollbar
-    sx={{
-      height: '100%',
-      '& .simplebar-content': {
-        height: '100%'
-      },
-      '& .simplebar-scrollbar:before': {
-        background: 'neutral.400'
-      }
-    }}
+      sx={{
+        height: '100%',
+        '& .simplebar-content': {
+          height: '100%'
+        },
+        '& .simplebar-scrollbar:before': {
+          background: 'neutral.400'
+        }
+      }}
     >
       <Box
         sx={{
@@ -86,7 +108,7 @@ if (role === 'admin') {
             }}
           >
             {/* <Logo /> */}
-            <Image src={Intelship} height={100} width={230}/>
+            <Image src={Intelship} height={100} width={230} />
           </Box>
           <Box
             sx={{
@@ -105,7 +127,7 @@ if (role === 'admin') {
                 color="inherit"
                 variant="subtitle1"
               >
-              {localStorage.getItem("fullname")}
+                {localStorage.getItem("fullname")}
               </Typography>
               {/* <Typography
                 color="neutral.400"

@@ -14,11 +14,19 @@ export const fetchVesselsClient = (companyName) => {
   return async (dispatch) => {
     // let companyName = localStorage.getItem("companyName")
     console.log(companyName)
-    const data = await axios.post(`${BASE_URL}vessel/client`,
-      {
+    // const data = await axios.post(`${BASE_URL}vessel/client`,
+    //   {
+    //   data: {
+    //     companyName: 'PT.MARINDO',
+    //   },
+    // });
+    const data = await axios({
+      method: 'post',
+      url: `${BASE_URL}vessel/client`,
+      headers: {}, 
       data: {
         companyName: companyName,
-      },
+      }
     });
     // return axios.post(`${BASE_URL}vessel`, payload);
     dispatch({ type: FETCH_VESSELS_CLIENT, payload: data.data });
